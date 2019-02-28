@@ -55,6 +55,8 @@ def createRestrictions(conf, solver, decVars, objVars):
     # Transition between slides
     for slide in range(0, conf.N):
         transConstraint = solver.Constraint(0, solver.Infinity())
+        for photoIdx in range(0, len(conf.data)):
+            
 
 
 
