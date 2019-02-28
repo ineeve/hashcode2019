@@ -1,6 +1,5 @@
 class Config:
-    def __init__(self, R, C):
+    def __init__(self, R):
         self.R = R
-        self.C = C
     def setData(self, data):
         self.data = data    
