@@ -106,11 +106,16 @@ def main():
     # The objective value of the solution.
     print('Optimal objective value = %d' % solver.Objective().Value())
     print()
-
-
+    photos = conf.data
     for line in decVars:
         for var in line:
-            print('%s = %d' % (var.name(), var.solution_value()))
+            if (var.solution_value == 1):
+                print('%s = %d' % (var.name(), var.solution_value()))
+                photo_begin, photo_end = var.name().split('_')
+                prevPhoto = photos[photo_begin]
+                nextPhoto = photos[photo_end]
+                
+
 
 main()
 
